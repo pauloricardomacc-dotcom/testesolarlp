@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-solar-blue: #1686C2;
+    --color-solar-deep: #073B60;
+    --color-solar-dark: #061D2C;
+    --color-solar-green: #A8C936;
+    --color-solar-yellow: #F3B62B;
+    --color-solar-bg: #F5F8FA;
+    --color-solar-text: #536370;
+    --color-solar-border: #DCE5EA;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #536370;
+    background-color: #F5F8FA;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Utilities and Glassmorphism */
+.glass-dark {
+  background: rgba(7, 59, 96, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(220, 229, 234, 0.7);
+}
+
+/* Solar glow animations */
+@keyframes solarPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.solar-glow {
+  animation: solarPulse 6s ease-in-out infinite;
+}
+
+@keyframes dashFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -144;
+  }
+}
+
+@keyframes dashFlowReverse {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 144;
+  }
+}
+
+.animate-energy-flow {
+  animation: dashFlow 6s linear infinite;
+}
+
+.animate-energy-flow-reverse {
+  animation: dashFlowReverse 6s linear infinite;
+}
+
+.animate-energy-flow-fast {
+  animation: dashFlow 3s linear infinite;
+}
