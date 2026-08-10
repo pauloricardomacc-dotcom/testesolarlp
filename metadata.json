@@ -1,0 +1,6 @@
+{
+  "name": "Solar Planet - Energia Solar no Oeste da Bahia",
+  "description": "Landing page institucional e de alta conversão para a Solar Planet, especialista em energia solar para residências, empresas e agronegócio em Barreiras e no Oeste da Bahia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
